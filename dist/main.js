@@ -14275,7 +14275,7 @@ eval("/*\n\nCopyright (c) 2012-2014 Jeffrey Mealo\n\nPermission is hereby grante
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const faker = __webpack_require__(/*! faker */ \"./node_modules/faker/index.js\");\nconsole.log(faker);\n\n\n//# sourceURL=webpack://acme-users/./src/index.js?");
+eval("const faker = __webpack_require__(/*! faker */ \"./node_modules/faker/index.js\");\nconst userArr = new Array(5).fill(\"\").map((_) => faker.name.firstName());\n\nconst list = document.querySelector(\"#user-list\");\n\nconst liArr = console.log(list);\n\nconst render = () => {\n    const html = `\n    ${userArr\n        .map(\n            (user, i) => `\n    <li>\n        <a href=\"#${i}\">${user}</a>\n    </li>\n    `,\n        )\n        .join(\"\")}\n    `;\n    list.innerHTML = html;\n};\n\nrender();\n\n\n//# sourceURL=webpack://acme-users/./src/index.js?");
 
 /***/ })
 
